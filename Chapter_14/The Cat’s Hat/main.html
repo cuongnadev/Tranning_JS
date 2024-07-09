@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat and Hat Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #cat {
+            position: absolute;
+            width: 100px;
+        }
+        #hat {
+            position: absolute;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img id="cat" src="./cat.png" alt="Cat">
+    <img id="hat" src="./hat.png" alt="Hat">
+    <script>
+        const cat = document.getElementById("cat");
+        const hat = document.getElementById("hat");
+
+        const catWidth = 100;
+        const catHeight = 100;
+        const hatWidth = 50;
+        const hatHeight = 50;
+
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const orbitRadiusX = 200;
+        const orbitRadiusY = 100;
+        const hatOrbitRadius = 150;
+
+        let angle = 0;
+
+        function animate(time) {
+            const catX = centerX + orbitRadiusX * Math.cos(angle) - catWidth / 2;
+            const catY = centerY + orbitRadiusY * Math.sin(angle) - catHeight / 2;
+
+            const hatX = catX + catWidth / 2 + hatOrbitRadius * Math.cos(angle * 2) - hatWidth / 2;
+            const hatY = catY + catHeight / 2 + hatOrbitRadius * Math.sin(angle * 2) - hatHeight / 2;
+
+            cat.style.left = `${catX}px`;
+            cat.style.top = `${catY}px`;
+
+            hat.style.left = `${hatX}px`;
+            hat.style.top = `${hatY}px`;
+
+            angle += 0.01;
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
