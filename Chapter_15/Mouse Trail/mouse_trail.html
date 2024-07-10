@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Trail</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .trail {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: red;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const trailLength = 40;
+        const trails = [];
+
+        
+        for (let i = 0; i < trailLength; i++) {
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            document.body.appendChild(trail);
+            trails.push(trail);
+        }
+
+        let currentTrail = 0;
+
+        // Hàm xử lý sự kiện di chuyển chuột
+        function handleMouseMove(event) {
+            const trail = trails[currentTrail];
+            trail.style.left = event.pageX + 'px';
+            trail.style.top = event.pageY + 'px';
+
+            currentTrail = (currentTrail + 1) % trailLength;
+        }
+
+        document.addEventListener('mousemove', handleMouseMove);
+    </script>
+</body>
+</html>

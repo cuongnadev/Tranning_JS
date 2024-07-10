@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Inflation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 10px;
+            user-select: none;
+        }
+        #balloon {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon">🎈</div>
+
+    <script>
+        let balloon = document.getElementById('balloon');
+        let size = 100;
+        const maxSize = 300; 
+
+        function handleKeyPress(event) {
+            if (event.key === 'ArrowUp') {
+                size *= 1.1;
+            } else if (event.key === 'ArrowDown') {
+                size *= 0.9;
+            }
+
+            if (size > maxSize) {
+                balloon.innerHTML = '💥';
+                document.removeEventListener('keydown', handleKeyPress);
+            } else {
+                balloon.style.fontSize = size + 'px';
+            }
+        }
+
+        document.addEventListener('keydown', handleKeyPress);
+    </script>
+</body>
+</html>
