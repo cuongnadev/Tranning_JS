@@ -1,0 +1,35 @@
+{
+    "name": "practice_javascript",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "start": "json-server db.json --port 3000 --static dist",
+        "preview": "vite preview --host",
+        "prepare": "husky install",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "devDependencies": {
+        "eslint": "^9.9.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "husky": "^9.1.5",
+        "lint-staged": "^15.2.9",
+        "prettier": "^3.3.3",
+        "vite": "^5.4.1"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "prettier --write"
+        ]
+    },
+    "dependencies": {
+        "json-server": "^1.0.0-beta.2",
+        "practice_javascript": "file:",
+        "sass": "^1.77.8"
+    }
+}

@@ -1,0 +1,72 @@
+.teachers-container {
+    padding: 0 50px 40px 0;
+}
+.list-teacher-items {
+    padding: 0 0 40px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row: 40px;
+    grid-gap: 40px;
+}
+.teacher-item {
+    &-container {
+        max-height: 352px;
+        padding: 32px;
+        background-color: $White;
+        border-radius: 20px;
+        position: relative;
+        transition: all 0.4s ease;
+    }
+
+    &-container:hover {
+        transform: scale(0.95);
+    }
+
+    &-avatar {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 24px;
+        flex-shrink: 0;
+        border-radius: 80px;
+    }
+
+    &-name {
+        margin-bottom: 9px;
+        @include font-heading($text-xl);
+        color: $Text;
+        cursor: pointer;
+    }
+
+    &-major {
+        margin-bottom: 32px;
+        @include font($text-base, $font-regular);
+        color: $Gray-3;
+    }
+
+    &-call,
+    &-mail {
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
+        padding: 8px;
+        background-color: $Purple;
+
+        & path {
+            fill: $White;
+        }
+    }
+
+    &-actions {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 24px;
+        height: 24px;
+        min-height: 24px;
+
+        & path {
+            fill: $Gray-3;
+        }
+    }
+}
+

@@ -1,0 +1,65 @@
+.header {
+    &-container {
+        padding: 50px 50px 40px 0;
+        justify-content: space-between;
+    }
+
+    &-title {
+        @include font-heading($text-4xl);
+    }
+}
+.action-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    background: $White;
+    box-shadow: $Shadow;
+    position: relative;
+    flex-shrink: 0;
+
+    & svg {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+}
+.notification-btn {
+    position: relative;
+
+    & .notification-dot {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 8px;
+        height: 8px;
+        border-radius: 40px;
+        background-color: $Purple;
+        opacity: 0;
+        flex-shrink: 0;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}
+.header-profile {
+    & .user-name {
+        @include font($text-sm, $font-semibold);
+        color: $Text;
+    }
+
+    & .user-role {
+        @include font($text-sm, $font-regular);
+        color: $Gray-3;
+    }
+
+    & .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        object-fit: cover;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+}

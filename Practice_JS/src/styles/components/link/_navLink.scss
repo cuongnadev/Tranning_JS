@@ -1,0 +1,21 @@
+.nav-link {
+    padding: 16px 24px;
+    width: 299px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: $White;
+    border-radius: 40px 0 0 40px;
+    @include font($text-base, $font-medium);
+    transition: background-color 0.2s ease;
+
+    &-active {
+        background-color: $Background;
+        color: $Purple;
+        
+        & path {
+            fill: $Purple;
+        }
+    }
+}

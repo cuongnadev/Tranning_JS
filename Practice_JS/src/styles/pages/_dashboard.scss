@@ -1,0 +1,166 @@
+.dashboard-container {
+    padding-right: 50px;
+    padding-bottom: 102px;
+}
+.overviews{
+    &-container {
+        width: 100%;
+        height: 172px;
+        border-radius: 20px;
+        background-color: $White;
+        flex-shrink: 0;
+    }
+
+    &-content {
+        padding: 46px;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+.overview-item {
+    gap: 30px;
+
+    &-title {
+        @include font($text-base, $font-regular);
+        color: $Gray-3;
+    }
+
+    &-quantity {
+        @include font-heading($text-4xl);
+        color: $Text;
+    }
+
+    &-icon {
+        width: 72px;
+        height: 72px;
+        border-radius: 40px;
+        flex-shrink: 0;
+
+        & path {
+            fill: $White;
+        }
+    }
+}
+.students {
+    & .overview-item-icon {
+        background-color: $Purple;
+    }
+}
+.teachers {
+    & .overview-item-icon {
+        background-color: $Orange;
+    }
+}
+.events {
+    & .overview-item-icon {
+        background-color: $Yellow;
+
+        & path {
+            fill: $White;
+        }
+    }
+}
+.food {
+    & .overview-item-icon {
+        background-color: $Text;
+
+        & path {
+            fill: $White;
+        }
+    }
+}
+.school-performance-container,
+.school-calendar-container,
+.school-finance-container {
+    width: 100%;
+    & img {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+.school-operations {
+    width: 100%;
+}
+.unpaid {
+    &-student {
+        padding: 32px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: $White;
+        gap: 30px;
+    }
+
+    &-title {
+        @include font-heading($text-xl);
+    }
+
+    &-student-item {
+        padding: 28px 32px;
+        justify-content: space-between;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $Purple-10;
+        }
+    }
+
+    &-student-info {
+        max-width: 280px;
+        width: 100%;
+    }
+
+    &-student-avatar {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 40px;
+        flex-shrink: 0;
+    }
+
+    &-student-name,
+    &-student-amount,
+    &-student-class-text {
+        @include font($text-base, $font-semibold);
+        color: $Text;
+    }
+
+    &-student-id {
+        max-width: 140px;
+        width: 100%;
+        @include font($text-base, $font-semibold);
+        color: $Purple;
+    }
+
+    &-student-icon-user {
+        width: 48px;
+        height: 48px;
+        border-radius: 40px;
+        background-color: $Orange;
+
+        & svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        & path {
+            fill: $White;
+        }
+    }
+
+    &-student-class-text p {
+        @include font($text-sm, $font-regular);
+        color: $Gray-3;
+    }
+    
+    &-action-more,
+    &-action-print  {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        
+        & path {
+            fill: $Gray-3;
+        }
+    }
+}

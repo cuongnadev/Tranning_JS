@@ -1,0 +1,15 @@
+.sort-button,
+.new-student-button {
+    display: flex;
+    gap: 16px;
+
+    & span {
+        @include font($text-base, $font-regular);
+    }
+}
+.sort-button span {
+    color: $Purple;
+}
+.new-student-button span {
+    color: $White;
+}

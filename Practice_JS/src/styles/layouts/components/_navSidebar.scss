@@ -1,0 +1,45 @@
+.primary_sidebar {
+    width: $sidebar-width;
+    min-height: 100vh;
+    background-color: $Purple;
+
+    &-logo_container {
+        padding: 50px 66px 50px 46px;
+
+        & .logo {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        & .title {
+            @include font-heading($text-4xl);
+            color: $White;
+        }
+    }
+
+    &-nav_container {
+        padding-bottom: 80px;
+    }
+
+    &-container {
+        & .branding-text, & .credits-text {
+            color: $White;
+            padding-left: 34px;
+        }
+        
+        & .branding-text {
+            @include font-heading($text-sm);
+            padding-bottom: 15px;
+        }
+
+        & .credits-text {
+            @include font($text-sm, $font-regular);
+
+            & span {
+                color: $Red;
+            }
+        }
+    }
+}

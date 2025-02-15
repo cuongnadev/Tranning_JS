@@ -1,0 +1,15 @@
+.global-container {
+    background-color: $Background;
+    gap: 50px;
+} 
+.content-container {
+    min-height: 100vh;
+}
+.right-sidebar {
+    padding: 50px 50px 0 32px;
+    background-color: $White;
+
+    &-children-container {
+        padding-top: 40px;
+    }
+}

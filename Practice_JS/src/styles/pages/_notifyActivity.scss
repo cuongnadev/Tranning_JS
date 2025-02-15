@@ -1,0 +1,88 @@
+.notify-activity {
+    padding: 0 50px 40px 0;
+}
+.timeline {
+    &-list {
+        width: 100%;
+        padding: 32px;
+        border-radius: 20px;
+        background-color: $White;
+    }
+
+    &-date {
+        padding-bottom: 10px;
+        @include font($text-sm, $font-regular);
+        color: $Gray-3;
+    }
+
+    &-text {
+        @include font($text-base, $font-regular);
+        color: $Text;
+
+        & span {
+        @include font-heading($text-base);
+        }
+    }
+
+    &-text span.reminder {
+        color: $Orange;
+    }
+
+    &-images {
+        padding-top: 24px;
+        gap: 46px;
+    }
+
+    &-image {
+        width: 279px;
+        height: 162px;
+        border-radius: 20px;
+    }
+
+    &-group {
+        position: relative;
+        margin-bottom: 48px;
+    }
+
+    &-group:last-child {
+        margin-bottom: 0;
+    }
+
+    
+    &-item {
+        position: relative;
+        padding-left: 28px;
+    }
+    
+    &-item::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 8px;
+        width: 1px;
+        height: calc(100% + 24px);
+        background-color: $Gray-3; 
+    }
+
+    &-item:last-child::after {
+        display: none;
+    }
+
+    &-item::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $White;
+        border: 4px solid $Purple;
+        z-index: 1;
+
+    }
+
+    &-title {
+        @include font-heading($text-base);
+    }
+}

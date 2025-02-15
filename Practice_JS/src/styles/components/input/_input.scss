@@ -1,0 +1,36 @@
+.input {
+    @include font($text-sm, $font-regular);
+    color: $Text;
+    border: 1px solid $Gray-1;
+    outline: none;
+    border-radius: 40px;
+    padding: 16px;
+    caret-color: $Purple;
+
+    &:focus {
+        border: 1px solid $Purple;
+    }
+
+    &::placeholder {
+        color: $Text;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+
+        &-label {
+            @include font-heading($text-xl);
+
+            @include mobile-large {
+                @include font-heading($text-base);
+            }
+        }
+
+        &-input_field {
+            width: 100%;
+        }
+    }
+}

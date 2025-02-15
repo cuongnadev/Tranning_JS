@@ -1,0 +1,98 @@
+.events {
+    &-container {
+        padding: 0 50px 40px 0;
+    }
+
+    &-title {
+        @include font-heading($text-4xl);
+        color: $Text;
+    }
+
+    &-calendar {
+        padding: 32px;
+        border-radius: 20px;
+        background-color: $White;
+    }
+}
+
+.calendar {
+    &-grid {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+        gap: 28px;
+    }
+
+    &-label-row {
+        align-items: center;
+        justify-items: center;
+    }
+
+    &-day-cell {
+        position: relative;
+        width: 110px;
+        height: 130px;
+        border-radius: 14px;
+        border: 1px solid $Gray-3;
+        cursor: pointer;
+
+        & span {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            @include font-heading($text-xl);
+        }
+
+        & .dot-events {
+            position: absolute;
+            left: 50%;
+            bottom: 27px;
+            transform: translateX(-50%);
+        }
+
+        & .dot-events-item {
+            min-width: 18px;
+            min-height: 18px;
+            border-radius: 18px;
+            flex-shrink: 0;
+        }
+
+        & .dot-events-item.class-a {
+            background-color: $Orange;
+        }
+
+        & .dot-events-item.class-b {
+            background-color: $Yellow;
+        }
+
+        & .dot-events-item.class-c {
+            background-color: $Purple;
+        }
+
+        & .dot-events.more .dot-events-item:not(:first-child) {
+            margin-left: -6px;
+        }
+
+        & .dot-events.more .dot-events-item {
+            width: 24px;
+            height: 24px;
+        }
+        & .dot-events.more .dot-events-item.more {
+            color: $White;
+            background-color: $Text;
+            letter-spacing: 1.5px;
+            @include font($text-xs, $font-semibold);
+        }
+
+        &:hover {
+            background: $Purple-10;
+        }
+    }
+
+    &-day-cell.empty {
+        background-color: $Gray;
+        user-select: none;
+        cursor: default;
+    }
+}

@@ -1,0 +1,141 @@
+.profile-details {
+    position: relative;
+    border-radius: 20px;
+    background-color: $White;
+    flex: 1;
+    &-image {
+        background-color: $Purple;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &-image img {
+        width: 100%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    &-info {
+        position: relative;
+        padding: 32px;
+    }
+
+    &-name {
+        padding-top: 84px;
+        padding-bottom: 8px;
+        @include font-heading($text-3xl);
+    }
+
+    &-role {
+        padding-bottom: 40px;
+        @include font($text-base, $font-semibold);
+        color: $Gray-3;
+    }
+
+    &-contacts {
+        padding-bottom: 40px;
+    }
+
+    &-label {
+        @include font-heading($text-xl);
+        color: $Text;
+    }
+
+    &-text-content {
+        width: 100%;
+        max-width: 616px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include font($text-base, $font-regular);
+        color: $Text;
+    }
+
+    &-about, &-edu-or-parent {
+        padding-bottom: 28px;
+    }
+
+    &-edu-name {
+        @include font($text-base, $font-semibold);
+        color: $Text;
+    }
+
+    &-edu-name span {
+        padding: 0 10px;
+    }
+
+    &-edu-date, &-parent-content-item {
+        padding-left: 26px;
+        @include font($text-base, $font-regular);
+        color: $Gray-3;
+    }
+
+    &-edu-date span, &-parent-content-item span {
+        @include font($text-base, $font-medium);
+        color: $Text;
+    }
+
+    &-actions {
+        position: absolute;
+        top: 32px;
+        right: 42px;
+        width: 24px;
+        height: 24px;
+        min-height: 24px;
+
+        & svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        & path {
+            fill: $Gray-3;
+        }
+    }
+
+    &-avatar {
+        padding: 8px;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 32px;
+        top: -100px;
+        border-radius: 50%;
+        background-color: $White;
+    
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+    }
+}
+.contact-item {
+    &-label {
+        padding-bottom: 8px;
+        @include font($text-base, $font-regular);
+        color: $Gray-3;
+    }
+
+    &-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: $Orange;
+        flex-shrink: 0;
+
+        & svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        & path {
+            fill: $White;
+        }
+    }
+
+    &-text {
+        @include font($text-base, $font-semibold);
+        color: $Text;
+    }
+}

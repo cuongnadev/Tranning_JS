@@ -1,0 +1,88 @@
+.form {
+    &-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px 48px;
+        background-color: $Background;
+        backdrop-filter: blur(5px);
+        border-radius: 2rem;
+
+        @include font($text-sm, $font-regular);
+        color: $Text;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    &-title {
+        &-1 {
+            @include font-heading($text-4xl);
+        }
+        &-2 {
+            @include font($text-xl, $font-semibold);
+        }
+        &-3 {
+            @include font($text-lg, $font-medium);
+        }
+    }
+
+    &-link {
+        color: $Purple;
+        font-weight: $font-semibold;
+        opacity: 0.9;
+        text-decoration: underline;
+    }
+
+    &-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &-other_method {
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+        &-btn {
+            flex: 1;
+            padding: 1rem;
+            background: rgba($color: white, $alpha: 0.15);
+        }
+    }
+
+    &-login {
+        &-container {
+            &-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 0.5rem;
+            }
+            &-2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.5rem;
+            }
+        }
+    }
+
+    &-register {
+        &-container {
+            &-1 {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    }
+}
