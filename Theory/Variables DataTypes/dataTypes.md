@@ -10,13 +10,15 @@
         5. Undefined
         6. Null
         7. Symbol
-        8. Object
 
     - Reference Types:
 
-        1. An object
-        2. An array
-        3. A date
+        1. Oject
+        2. Array
+        3. Dates
+        4. Functions
+        5. Collections
+        6. Other types of objects...
 
 
 ### Example
